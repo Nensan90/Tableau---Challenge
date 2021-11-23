@@ -1,0 +1,1083 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.21.1018.0949                               -->
+<workbook original-version='18.1' source-build='2021.3.3 (20213.21.1018.0949)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='201306-citibike-tripdata+' inline='true' name='federated.1ong9pr16lo4gl1emk6070imytik' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='201306-citibike-tripdata' name='textscan.1w1neh10ubzbfa12e21az0etadw6'>
+            <connection class='textscan' directory='C:/Users/thoma/Desktop/Bootcamp/Tableau hw' filename='201306-citibike-tripdata.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[201306-citibike-tripdata.csv].[bikeid]' />
+              <expression op='[201506-citibike-tripdata.csv].[bikeid]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[201306-citibike-tripdata.csv].[bikeid]' />
+                <expression op='[201406 -Citi Bike trip data.csv].[bikeid]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201306-citibike-tripdata.csv' table='[201306-citibike-tripdata#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='tripduration' ordinal='0' />
+                <column datatype='datetime' name='starttime' ordinal='1' />
+                <column datatype='datetime' name='stoptime' ordinal='2' />
+                <column datatype='integer' name='start station id' ordinal='3' />
+                <column datatype='string' name='start station name' ordinal='4' />
+                <column datatype='real' name='start station latitude' ordinal='5' />
+                <column datatype='real' name='start station longitude' ordinal='6' />
+                <column datatype='integer' name='end station id' ordinal='7' />
+                <column datatype='string' name='end station name' ordinal='8' />
+                <column datatype='real' name='end station latitude' ordinal='9' />
+                <column datatype='real' name='end station longitude' ordinal='10' />
+                <column datatype='integer' name='bikeid' ordinal='11' />
+                <column datatype='string' name='usertype' ordinal='12' />
+                <column datatype='integer' name='birth year' ordinal='13' />
+                <column datatype='integer' name='gender' ordinal='14' />
+              </columns>
+            </relation>
+            <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201406 -Citi Bike trip data.csv' table='[201406 -Citi Bike trip data#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='tripduration' ordinal='0' />
+                <column datatype='datetime' name='starttime' ordinal='1' />
+                <column datatype='datetime' name='stoptime' ordinal='2' />
+                <column datatype='integer' name='start station id' ordinal='3' />
+                <column datatype='string' name='start station name' ordinal='4' />
+                <column datatype='real' name='start station latitude' ordinal='5' />
+                <column datatype='real' name='start station longitude' ordinal='6' />
+                <column datatype='integer' name='end station id' ordinal='7' />
+                <column datatype='string' name='end station name' ordinal='8' />
+                <column datatype='real' name='end station latitude' ordinal='9' />
+                <column datatype='real' name='end station longitude' ordinal='10' />
+                <column datatype='integer' name='bikeid' ordinal='11' />
+                <column datatype='string' name='usertype' ordinal='12' />
+                <column datatype='string' name='birth year' ordinal='13' />
+                <column datatype='integer' name='gender' ordinal='14' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201506-citibike-tripdata.csv' table='[201506-citibike-tripdata#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='tripduration' ordinal='0' />
+              <column datatype='datetime' name='starttime' ordinal='1' />
+              <column datatype='datetime' name='stoptime' ordinal='2' />
+              <column datatype='integer' name='start station id' ordinal='3' />
+              <column datatype='string' name='start station name' ordinal='4' />
+              <column datatype='real' name='start station latitude' ordinal='5' />
+              <column datatype='real' name='start station longitude' ordinal='6' />
+              <column datatype='integer' name='end station id' ordinal='7' />
+              <column datatype='string' name='end station name' ordinal='8' />
+              <column datatype='real' name='end station latitude' ordinal='9' />
+              <column datatype='real' name='end station longitude' ordinal='10' />
+              <column datatype='integer' name='bikeid' ordinal='11' />
+              <column datatype='string' name='usertype' ordinal='12' />
+              <column datatype='integer' name='birth year' ordinal='13' />
+              <column datatype='integer' name='gender' ordinal='14' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[201306-citibike-tripdata.csv].[bikeid]' />
+              <expression op='[201506-citibike-tripdata.csv].[bikeid]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[201306-citibike-tripdata.csv].[bikeid]' />
+                <expression op='[201406 -Citi Bike trip data.csv].[bikeid]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201306-citibike-tripdata.csv' table='[201306-citibike-tripdata#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='tripduration' ordinal='0' />
+                <column datatype='datetime' name='starttime' ordinal='1' />
+                <column datatype='datetime' name='stoptime' ordinal='2' />
+                <column datatype='integer' name='start station id' ordinal='3' />
+                <column datatype='string' name='start station name' ordinal='4' />
+                <column datatype='real' name='start station latitude' ordinal='5' />
+                <column datatype='real' name='start station longitude' ordinal='6' />
+                <column datatype='integer' name='end station id' ordinal='7' />
+                <column datatype='string' name='end station name' ordinal='8' />
+                <column datatype='real' name='end station latitude' ordinal='9' />
+                <column datatype='real' name='end station longitude' ordinal='10' />
+                <column datatype='integer' name='bikeid' ordinal='11' />
+                <column datatype='string' name='usertype' ordinal='12' />
+                <column datatype='integer' name='birth year' ordinal='13' />
+                <column datatype='integer' name='gender' ordinal='14' />
+              </columns>
+            </relation>
+            <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201406 -Citi Bike trip data.csv' table='[201406 -Citi Bike trip data#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='tripduration' ordinal='0' />
+                <column datatype='datetime' name='starttime' ordinal='1' />
+                <column datatype='datetime' name='stoptime' ordinal='2' />
+                <column datatype='integer' name='start station id' ordinal='3' />
+                <column datatype='string' name='start station name' ordinal='4' />
+                <column datatype='real' name='start station latitude' ordinal='5' />
+                <column datatype='real' name='start station longitude' ordinal='6' />
+                <column datatype='integer' name='end station id' ordinal='7' />
+                <column datatype='string' name='end station name' ordinal='8' />
+                <column datatype='real' name='end station latitude' ordinal='9' />
+                <column datatype='real' name='end station longitude' ordinal='10' />
+                <column datatype='integer' name='bikeid' ordinal='11' />
+                <column datatype='string' name='usertype' ordinal='12' />
+                <column datatype='string' name='birth year' ordinal='13' />
+                <column datatype='integer' name='gender' ordinal='14' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201506-citibike-tripdata.csv' table='[201506-citibike-tripdata#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='tripduration' ordinal='0' />
+              <column datatype='datetime' name='starttime' ordinal='1' />
+              <column datatype='datetime' name='stoptime' ordinal='2' />
+              <column datatype='integer' name='start station id' ordinal='3' />
+              <column datatype='string' name='start station name' ordinal='4' />
+              <column datatype='real' name='start station latitude' ordinal='5' />
+              <column datatype='real' name='start station longitude' ordinal='6' />
+              <column datatype='integer' name='end station id' ordinal='7' />
+              <column datatype='string' name='end station name' ordinal='8' />
+              <column datatype='real' name='end station latitude' ordinal='9' />
+              <column datatype='real' name='end station longitude' ordinal='10' />
+              <column datatype='integer' name='bikeid' ordinal='11' />
+              <column datatype='string' name='usertype' ordinal='12' />
+              <column datatype='integer' name='birth year' ordinal='13' />
+              <column datatype='integer' name='gender' ordinal='14' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[bikeid (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[bikeid]' />
+          <map key='[bikeid (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[bikeid]' />
+          <map key='[bikeid]' value='[201306-citibike-tripdata.csv].[bikeid]' />
+          <map key='[birth year (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[birth year]' />
+          <map key='[birth year (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[birth year]' />
+          <map key='[birth year]' value='[201306-citibike-tripdata.csv].[birth year]' />
+          <map key='[end station id (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[end station id]' />
+          <map key='[end station id (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[end station id]' />
+          <map key='[end station id]' value='[201306-citibike-tripdata.csv].[end station id]' />
+          <map key='[end station latitude (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[end station latitude]' />
+          <map key='[end station latitude (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[end station latitude]' />
+          <map key='[end station latitude]' value='[201306-citibike-tripdata.csv].[end station latitude]' />
+          <map key='[end station longitude (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[end station longitude]' />
+          <map key='[end station longitude (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[end station longitude]' />
+          <map key='[end station longitude]' value='[201306-citibike-tripdata.csv].[end station longitude]' />
+          <map key='[end station name (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[end station name]' />
+          <map key='[end station name (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[end station name]' />
+          <map key='[end station name]' value='[201306-citibike-tripdata.csv].[end station name]' />
+          <map key='[gender (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[gender]' />
+          <map key='[gender (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[gender]' />
+          <map key='[gender]' value='[201306-citibike-tripdata.csv].[gender]' />
+          <map key='[start station id (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[start station id]' />
+          <map key='[start station id (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[start station id]' />
+          <map key='[start station id]' value='[201306-citibike-tripdata.csv].[start station id]' />
+          <map key='[start station latitude (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[start station latitude]' />
+          <map key='[start station latitude (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[start station latitude]' />
+          <map key='[start station latitude]' value='[201306-citibike-tripdata.csv].[start station latitude]' />
+          <map key='[start station longitude (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[start station longitude]' />
+          <map key='[start station longitude (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[start station longitude]' />
+          <map key='[start station longitude]' value='[201306-citibike-tripdata.csv].[start station longitude]' />
+          <map key='[start station name (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[start station name]' />
+          <map key='[start station name (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[start station name]' />
+          <map key='[start station name]' value='[201306-citibike-tripdata.csv].[start station name]' />
+          <map key='[starttime (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[starttime]' />
+          <map key='[starttime (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[starttime]' />
+          <map key='[starttime]' value='[201306-citibike-tripdata.csv].[starttime]' />
+          <map key='[stoptime (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[stoptime]' />
+          <map key='[stoptime (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[stoptime]' />
+          <map key='[stoptime]' value='[201306-citibike-tripdata.csv].[stoptime]' />
+          <map key='[tripduration (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[tripduration]' />
+          <map key='[tripduration (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[tripduration]' />
+          <map key='[tripduration]' value='[201306-citibike-tripdata.csv].[tripduration]' />
+          <map key='[usertype (201406 -Citi Bike trip data.csv)]' value='[201406 -Citi Bike trip data.csv].[usertype]' />
+          <map key='[usertype (201506-citibike-tripdata.csv)]' value='[201506-citibike-tripdata.csv].[usertype]' />
+          <map key='[usertype]' value='[201306-citibike-tripdata.csv].[usertype]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[201306-citibike-tripdata.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[birth year (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender (201406 -Citi Bike trip data.csv)]</local-name>
+            <parent-name>[201406 -Citi Bike trip data.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[birth year (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender (201506-citibike-tripdata.csv)]</local-name>
+            <parent-name>[201506-citibike-tripdata.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='201306-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F]' role='measure' type='quantitative' />
+      <column caption='Bikeid (201506-Citibike-Tripdata.Csv)' datatype='integer' name='[bikeid (201506-citibike-tripdata.csv)]' role='measure' type='quantitative' />
+      <column caption='Bikeid' datatype='integer' name='[bikeid]' role='measure' type='quantitative' />
+      <column caption='Birth Year (201506-Citibike-Tripdata.Csv)' datatype='integer' name='[birth year (201506-citibike-tripdata.csv)]' role='dimension' type='quantitative' />
+      <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+      <column caption='End Station Id (201506-Citibike-Tripdata.Csv)' datatype='integer' name='[end station id (201506-citibike-tripdata.csv)]' role='measure' type='quantitative' />
+      <column caption='End Station Id' datatype='integer' name='[end station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[end station latitude (201406 -Citi Bike trip data.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude (201506-Citibike-Tripdata.Csv)' datatype='real' name='[end station latitude (201506-citibike-tripdata.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[end station longitude (201406 -Citi Bike trip data.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude (201506-Citibike-Tripdata.Csv)' datatype='real' name='[end station longitude (201506-citibike-tripdata.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Name (201506-Citibike-Tripdata.Csv)' datatype='string' name='[end station name (201506-citibike-tripdata.csv)]' role='dimension' type='nominal' />
+      <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+      <column caption='Gender (201506-Citibike-Tripdata.Csv)' datatype='integer' name='[gender (201506-citibike-tripdata.csv)]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='integer' name='[gender]' role='measure' type='quantitative' />
+      <column caption='Start Station Id (201506-Citibike-Tripdata.Csv)' datatype='integer' name='[start station id (201506-citibike-tripdata.csv)]' role='measure' type='quantitative' />
+      <column caption='Start Station Id' datatype='integer' name='[start station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[start station latitude (201406 -Citi Bike trip data.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Latitude (201506-Citibike-Tripdata.Csv)' datatype='real' name='[start station latitude (201506-citibike-tripdata.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[start station longitude (201406 -Citi Bike trip data.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude (201506-Citibike-Tripdata.Csv)' datatype='real' name='[start station longitude (201506-citibike-tripdata.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Name (201506-Citibike-Tripdata.Csv)' datatype='string' name='[start station name (201506-citibike-tripdata.csv)]' role='dimension' type='nominal' />
+      <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column caption='Starttime (201506-Citibike-Tripdata.Csv)' datatype='datetime' name='[starttime (201506-citibike-tripdata.csv)]' role='dimension' type='ordinal' />
+      <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column caption='Stoptime (201506-Citibike-Tripdata.Csv)' datatype='datetime' name='[stoptime (201506-citibike-tripdata.csv)]' role='dimension' type='ordinal' />
+      <column caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+      <column caption='Tripduration (201506-Citibike-Tripdata.Csv)' datatype='integer' name='[tripduration (201506-citibike-tripdata.csv)]' role='measure' type='quantitative' />
+      <column caption='Tripduration' datatype='integer' name='[tripduration]' role='measure' type='quantitative' />
+      <column caption='Usertype (201506-Citibike-Tripdata.Csv)' datatype='string' name='[usertype (201506-citibike-tripdata.csv)]' role='dimension' type='nominal' />
+      <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='201306-citibike-tripdata.csv' id='201306-citibike-tripdata.csv_C6A8F298A4074321AEE2E7D25BC2665F'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[201306-citibike-tripdata.csv].[bikeid]' />
+                    <expression op='[201506-citibike-tripdata.csv].[bikeid]' />
+                  </expression>
+                </clause>
+                <relation join='inner' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[201306-citibike-tripdata.csv].[bikeid]' />
+                      <expression op='[201406 -Citi Bike trip data.csv].[bikeid]' />
+                    </expression>
+                  </clause>
+                  <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201306-citibike-tripdata.csv' table='[201306-citibike-tripdata#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                      <column datatype='integer' name='tripduration' ordinal='0' />
+                      <column datatype='datetime' name='starttime' ordinal='1' />
+                      <column datatype='datetime' name='stoptime' ordinal='2' />
+                      <column datatype='integer' name='start station id' ordinal='3' />
+                      <column datatype='string' name='start station name' ordinal='4' />
+                      <column datatype='real' name='start station latitude' ordinal='5' />
+                      <column datatype='real' name='start station longitude' ordinal='6' />
+                      <column datatype='integer' name='end station id' ordinal='7' />
+                      <column datatype='string' name='end station name' ordinal='8' />
+                      <column datatype='real' name='end station latitude' ordinal='9' />
+                      <column datatype='real' name='end station longitude' ordinal='10' />
+                      <column datatype='integer' name='bikeid' ordinal='11' />
+                      <column datatype='string' name='usertype' ordinal='12' />
+                      <column datatype='integer' name='birth year' ordinal='13' />
+                      <column datatype='integer' name='gender' ordinal='14' />
+                    </columns>
+                  </relation>
+                  <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201406 -Citi Bike trip data.csv' table='[201406 -Citi Bike trip data#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                      <column datatype='integer' name='tripduration' ordinal='0' />
+                      <column datatype='datetime' name='starttime' ordinal='1' />
+                      <column datatype='datetime' name='stoptime' ordinal='2' />
+                      <column datatype='integer' name='start station id' ordinal='3' />
+                      <column datatype='string' name='start station name' ordinal='4' />
+                      <column datatype='real' name='start station latitude' ordinal='5' />
+                      <column datatype='real' name='start station longitude' ordinal='6' />
+                      <column datatype='integer' name='end station id' ordinal='7' />
+                      <column datatype='string' name='end station name' ordinal='8' />
+                      <column datatype='real' name='end station latitude' ordinal='9' />
+                      <column datatype='real' name='end station longitude' ordinal='10' />
+                      <column datatype='integer' name='bikeid' ordinal='11' />
+                      <column datatype='string' name='usertype' ordinal='12' />
+                      <column datatype='string' name='birth year' ordinal='13' />
+                      <column datatype='integer' name='gender' ordinal='14' />
+                    </columns>
+                  </relation>
+                </relation>
+                <relation connection='textscan.1w1neh10ubzbfa12e21az0etadw6' name='201506-citibike-tripdata.csv' table='[201506-citibike-tripdata#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='tripduration' ordinal='0' />
+                    <column datatype='datetime' name='starttime' ordinal='1' />
+                    <column datatype='datetime' name='stoptime' ordinal='2' />
+                    <column datatype='integer' name='start station id' ordinal='3' />
+                    <column datatype='string' name='start station name' ordinal='4' />
+                    <column datatype='real' name='start station latitude' ordinal='5' />
+                    <column datatype='real' name='start station longitude' ordinal='6' />
+                    <column datatype='integer' name='end station id' ordinal='7' />
+                    <column datatype='string' name='end station name' ordinal='8' />
+                    <column datatype='real' name='end station latitude' ordinal='9' />
+                    <column datatype='real' name='end station longitude' ordinal='10' />
+                    <column datatype='integer' name='bikeid' ordinal='11' />
+                    <column datatype='string' name='usertype' ordinal='12' />
+                    <column datatype='integer' name='birth year' ordinal='13' />
+                    <column datatype='integer' name='gender' ordinal='14' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='HW'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201306-citibike-tripdata+' name='federated.1ong9pr16lo4gl1emk6070imytik' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ong9pr16lo4gl1emk6070imytik'>
+            <column caption='Bikeid' datatype='integer' name='[bikeid]' role='measure' type='quantitative' />
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column-instance column='[bikeid]' derivation='Count' name='[cnt:bikeid:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[birth year]' derivation='None' name='[none:birth year:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ong9pr16lo4gl1emk6070imytik].[cnt:bikeid:qk]</rows>
+        <cols>[federated.1ong9pr16lo4gl1emk6070imytik].[none:birth year:qk]</cols>
+      </table>
+      <simple-id uuid='{D47A270E-8965-4980-8462-A27D2D372B84}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='HW'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ong9pr16lo4gl1emk6070imytik].[none:birth year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D8C0346E-45E6-41AD-A13C-D67C85F6964B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='HW' width='192'>
+      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
+      TkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
